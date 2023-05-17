@@ -40,9 +40,9 @@ public class DBConnection {
     public Connection getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/web_sale_morcycles_ver2";
+            String url = "jdbc:mysql://localhost:3306/motorcycle";
             String user = "root";
-            String passWord = "Zingzang2";
+            String passWord = "nguyenli999";
             return DriverManager.getConnection(url, user, passWord);
         } catch (ClassNotFoundException | SQLException e) {
 
