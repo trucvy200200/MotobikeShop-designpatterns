@@ -12,7 +12,7 @@
 		<servlet.api.version>3.1.0</servlet.api.version>
 		<sitemesh.version>2.4.2</sitemesh.version>
 		<mysql.version>8.0.29</mysql.version>
-		<servletWeld.version>1.1.0.Final</servletWeld.version>
+		<servletWeld.version>1.1.34.Final</servletWeld.version>
 	</properties>
 
 	<dependencies>
