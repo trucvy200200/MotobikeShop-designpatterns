@@ -38,7 +38,8 @@ public class contactController extends HttpServlet {
 		CartModel cartModel = new CartModel();
 		cartModel = detailsOnNavBar.showCartNum(session, cartModel);
 		request.setAttribute("cart", cartModel);
-
+                response
+		.addHeader("Content-Security-Policy", "default-src 'self';  script-src 'self' code.jquery.com ajax.googleapis.com stackpath.bootstrapcdn.com  ;");
 		// show view contact page
 		RequestDispatcher rd = request.getRequestDispatcher("views/web/contact.jsp");
 		rd.forward(request, response);

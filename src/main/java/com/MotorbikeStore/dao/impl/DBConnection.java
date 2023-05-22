@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 public class DBConnection {
 
     private static DBConnection instance = null;
-    private static Connection connect;
+    //private static Connection connect;
 
     private DBConnection() {
         // private constructor to prevent direct instantiation

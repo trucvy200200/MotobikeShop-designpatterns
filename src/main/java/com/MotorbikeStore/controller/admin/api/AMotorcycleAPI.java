@@ -17,7 +17,8 @@ import com.MotorbikeStore.service.IPictureService;
 import com.MotorbikeStore.service.IaMotorcycleService;
 import com.MotorbikeStore.utils.FileUtil;
 import com.MotorbikeStore.utils.HttpUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.codehaus.jackson.map.ObjectMapper;
 
 
 @WebServlet("/api-admin-aMotorcycle")

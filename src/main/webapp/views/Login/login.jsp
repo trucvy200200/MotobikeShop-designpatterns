@@ -38,26 +38,27 @@
 							account</a>
 					</div>
 
+					
 					<div class="signin-form">
 						<h2 class="form-title">WELCOME TO SIGN IN</h2>
-						<form method="post" action="login" class="login-form" id="login-form">
+						<form method="post" action="login" class="login-form" id="login-form" autocomplete="off">
 							<div class="form-group">
 								<label for="email"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 									type="text" name="email" id="email"
-									placeholder="Your Email" required="required"/>  <!-- required="required": tb khung nhap trong -->
+									placeholder="Your Email" required="required" autocomplete="off"/>  <!-- required="required": tb khung nhap trong -->
 							</div>
 							<div class="form-group">
 								<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
 									type="password" name="password" id="password"
-									placeholder="Password" required="required" />
+									placeholder="Password" required="required" autocomplete="off"/>
 							</div>
 							<div class="form-group">
 								<a href="forgot">Forgot Password?</a>
 							</div>
 							<div class="form-group form-button btnLoginpage" style="left: 25%;">
 								<input type="submit" name="signin" id="signin"
-									class="form-submit" value="Log in" />
+									class="form-submit" value="Log in"  />
 							</div>
 						</form>
 <!-- 						<div class="social-login">
@@ -71,6 +72,13 @@
 							</ul>
 						</div> -->
 					</div>
+					
+					
+					
+					
+					
+					
+					
 				</div>
 			</div>
 		</section>

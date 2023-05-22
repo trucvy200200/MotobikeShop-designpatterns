@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.MotorbikeStore.model.roleModel;
 import com.MotorbikeStore.service.IRoleService;
 import com.MotorbikeStore.utils.HttpUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
 @WebServlet(urlPatterns = {"/api-admin-Role"})
 public class RoleAPI extends HttpServlet{
 	

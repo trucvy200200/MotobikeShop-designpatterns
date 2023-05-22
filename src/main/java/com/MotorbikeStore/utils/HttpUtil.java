@@ -3,7 +3,7 @@ package com.MotorbikeStore.utils;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
 
 public class HttpUtil {
 	private String value;

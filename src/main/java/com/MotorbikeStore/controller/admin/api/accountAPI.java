@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.MotorbikeStore.model.AccountModel;
 import com.MotorbikeStore.service.IAccountService;
 import com.MotorbikeStore.utils.HttpUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
 
 
 @WebServlet("/accountAPI")

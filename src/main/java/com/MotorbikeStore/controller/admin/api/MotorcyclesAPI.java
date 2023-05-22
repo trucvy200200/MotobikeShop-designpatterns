@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.MotorbikeStore.model.motorcyclesModel;
 import com.MotorbikeStore.service.IMotorcyclesService;
 import com.MotorbikeStore.utils.HttpUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
 
 @WebServlet("/api-admin-Motorcycles")
 public class MotorcyclesAPI extends HttpServlet {

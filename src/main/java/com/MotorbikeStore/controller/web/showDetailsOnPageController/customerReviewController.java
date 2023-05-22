@@ -16,6 +16,8 @@ import com.MotorbikeStore.service.IReviewService;
 import com.MotorbikeStore.service.IpaymentService;
 
 
+
+
 @WebServlet("/customerReview")
 public class customerReviewController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -33,24 +35,27 @@ public class customerReviewController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		RequestDispatcher rd = null;
+		
 		String aMotorIdstr = request.getParameter("aMotorId");
 		//check login
-		if (session.getAttribute("name") != null && session.getAttribute("role") == "user") {
+		if (session.getAttribute("name") != null && session.getAttribute("role") == "user") 
+		{
 			
 			// save review
 			String message = request.getParameter("message");
 
-			
-			String userIdstr = null;
-			if(session.getAttribute("userId") != null) {
+			if (message !=null && !message.isEmpty() && !message.contains("<") 
+					&& !message.contains(">") && !message.contains("</")) 
+			{
+				String userIdstr = null;
+				if(session.getAttribute("userId") != null) {
 				userIdstr = session.getAttribute("userId").toString();
 			}
 			int userId = 0;
 			reviewModel modelReview = new reviewModel();
 			
 			if (message != null) {
-				modelReview.setRvDesc(message);
-				
+				modelReview.setRvDesc(message);	
 			}
 
 			if (aMotorIdstr != null) {
@@ -65,21 +70,24 @@ public class customerReviewController extends HttpServlet {
 			if(paymentService.UserIsCustomer(userId)) {
 				if (message != null) {
 					int reviewId = reviewService.save(modelReview);
-					
 				}
 			}
-			
-			
-			// show view again
-			response.sendRedirect("notaddshopDetail?id=" + Integer.parseInt(aMotorIdstr) +"");
+		 		
 
-		} else {
-
-			if (aMotorIdstr != null) {
-				response.sendRedirect("login?id1=10&id2=" + Integer.parseInt(aMotorIdstr) + "");
-			}
 
 		}
+			 else {
+	                // Hi?n th? thông báo l?i n?u ?o?n review ch?a các ký t? không h?p l?
+	                request.setAttribute("error", "?o?n review không ???c ch?a các ký t? không h?p l?.");
+	            }
+	            
+	            // Hi?n th? l?i trang chi ti?t s?n ph?m
+	            response.sendRedirect("notaddshopDetail?id=" + Integer.parseInt(aMotorIdstr) + "");
+	            
+	        } else {
+	            // Chuy?n h??ng ??ntrang ??ng nh?p n?u ng??i dùng ch?a ??ng nh?p
+	            response.sendRedirect("login?id1=10&id2=" + Integer.parseInt(aMotorIdstr) + "");
+	        }
 	}
 
 }

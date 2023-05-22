@@ -23,7 +23,7 @@ import com.MotorbikeStore.service.IProductDetailService;
 import com.MotorbikeStore.service.IcustomerService;
 import com.MotorbikeStore.service.IpaymentService;
 import com.MotorbikeStore.utils.HttpUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.ObjectMapper;
 
 @WebServlet("/order")
 public class orderController extends HttpServlet {

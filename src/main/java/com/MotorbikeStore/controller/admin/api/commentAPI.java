@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.MotorbikeStore.model.commentModel;
 import com.MotorbikeStore.service.ICommentService;
-import com.MotorbikeStore.utils.HttpUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.MotorbikeStore.utils.HttpUtil;;
+import org.codehaus.jackson.map.ObjectMapper;
 
 
 @WebServlet("/commentAPI")
