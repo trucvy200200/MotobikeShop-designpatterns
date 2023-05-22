@@ -49,7 +49,7 @@
 					</div>
 
 
-					<c:forEach var="item" items="${model3.listResult}">
+					<c:forEach var="item" items="${model3.listResult1.arrayList}">
 						<c:set var="path"
 							value="/MotorbikeStore/uploads/images/product/${item.picName}" />
 						<div class="carousel-item position-relative" style="height: 430px;">
@@ -144,7 +144,7 @@
 	</h2>
 	<div class="row px-xl-5">
 
-		<c:forEach var="item" items="${modelFeature.listResult}">
+		<c:forEach var="item" items="${modelFeature.listResult1.arrayList}">
 			<c:set var="path"
 				value="/MotorbikeStore/uploads/images/product/${item.picName}" />
 			<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
@@ -231,7 +231,7 @@
 	<div class="row px-xl-5">
 
 
-		<c:forEach var="item" items="${model.listResult}">
+		<c:forEach var="item" items="${model.listResult1.arrayList}">
 			<c:set var="path"
 				value="/MotorbikeStore/uploads/images/product/${item.picName}" />
 			<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
