@@ -24,9 +24,11 @@ import java.util.logging.Logger;
 public class DBConnection {
 
     private static DBConnection instance = null;
-    //private static Connection connect;
+    private String url = "jdbc:mysql://localhost:3306/web_sale_morcycles_ver2";
+    private String user = "root";
+    private String passWord = "Zingzang2";
 
-    private DBConnection() {
+    protected DBConnection() {
         // private constructor to prevent direct instantiation
     }
 
@@ -39,10 +41,7 @@ public class DBConnection {
 
     public Connection getConnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/motorcycle";
-            String user = "root";
-            String passWord = "nguyenli999";
+            Class.forName("com.mysql.jdbc.Driver");            
             return DriverManager.getConnection(url, user, passWord);
         } catch (ClassNotFoundException | SQLException e) {
 
